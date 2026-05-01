@@ -88,7 +88,7 @@ classDiagram
 
 A continuación, una vista previa de la interfaz de usuario:
 
-![Captura de pantalla](image-1.png)
+![Captura de pantalla](image.png)
 
 Para registar una nueva tarea, sigue estos pasos:
 
