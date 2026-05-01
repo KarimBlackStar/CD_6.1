@@ -52,3 +52,77 @@ fetch('https://api.taskmaster.com/tasks', {
 ## Fórmula de Productividad
 
 La eficiendia del usuario es calcula con la siguiente fórmula: 
+
+$$E = \frac{\text{Tareas Completadas}}{\text{Tareas Totales}} \times 100$$
+
+Donde:
+
++ E es la eficiencia en porcentaje.
++ Tareas Completadas es el número de tareas finalizadas por el ususario.
++ Tareas Totales es el número total de tareas asignadas.
+
+## Diagrama de Clases
+
+La siguiente representación en UML muestra la estructura del sistema:
+
+```mermaid
+classDiagram
+    Usuario "1" --> "*" Tarea : asigna
+    
+    class Usuario {
+        - nombre: String
+        - email: String
+        + agregarTarea(tarea: Tarea) : void
+        + eliminarTarea(tarea: Tarea) : void
+    }
+    
+    class Tarea {
+        - titulo: String
+        - prioridad: String
+        - completada: Boolean
+        + marcarComoCompletada() : void
+    }
+```
+
+## Capturas de Pantalla
+
+A continuación, una vista previa de la interfaz de usuario:
+
+![Captura de pantalla](image-1.png)
+
+Para registar una nueva tarea, sigue estos pasos:
+
+1. Haz clic en el botón **Nueva Tarea**.
+2. Completa el formulario con los datos de la tarea.
+  i. **Título**: Nombre de la tarea.
+  ii. **Prioridad**: Nivel de importancia (baja, media alta).
+  iii. **Fecha Límite**: Día y hora de vencimiento.
+1. Haz clic en **Guardar** para agregar la tarea a tu lista.
+2. ¡Listo! La tarea se ha registrado correctamente.
+   
+Si deseas que el título de la tarea sea visible en negrita, escríbelo entre dobles asteristos: \**Título de la Tarea\**.
+
+## Historial de versiones
+
+En la siguiente tabla se muestran las versione publicadas de la aplicación:
+
+| Versión | Fecha | Descripción |
+| ---: | :---: | :--- |
+| 1.0.0 | 01/01/2024 | Lanzamiento inicial  |
+| 1.1.0 | 15/01/2024 | Nuevas funcionalidades |
+| 1.1.1 | 30/01/2024 | Corrección de errores |
+| 1.2.0 | 15/02/2024 | Mejoras de rendimiento |
+| 2.0.0 | 15/03/2024 | Versión estable |
+| 2.1.0 | 30/03/2024 | Corrección de errores |
+| 2.2.0 | 15/04/2024 | Mejoras de usabilidad |
+| 2.3.0 | 30/04/2024 | Nuevas funcionalidades |
+
+## Créditos
+
+Desarrollado por Hanouni Otero Karim. Para más información, visita el repositorio en GitHub: 
+
+[Repositorio de la Tarea 6.1](https://github.com/KarimBlackStar/CD_6.1.git)
+
+## Licencia 
+
+Este proyrecto está bajo la Licencia MIT.
